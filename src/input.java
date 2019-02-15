@@ -29,18 +29,18 @@ public class input {
 	
 	public void checkPoint() {
 		// If one of these conditions are met then the given input is out of bound
-		// idk why 1,3 doesn't work when added (row < 1 || column < 1)
-		// eventhough 2,3 and 3,3 work
-		if (row > 2 || column > 2 || row < 1 || column < 1) {
+		if (row > 2 || column > 2 || row < 0 || column < 0) {
 			System.out.println("Invalid input please re-enter a point between 1 and 3");
 			setPoint(); 
 		}
 	}
-
+	
+	// get method for row 
 	public int getRow() {
 		return row;
 	}
 
+	// get method for column 
 	public int getColumn() {
 		return column;
 	}
