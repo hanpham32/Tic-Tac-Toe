@@ -66,21 +66,34 @@ public class Board {
              int count1 = 0;
              int count2 = 0;
              for (int i=0; i<3; i++) {
-            	 for (int j=0; j<=0; j++) {
             		 if (gameBoard[i][i].equals(turn)) {
             			 count1++;
             		 }
-            	 }
             	 if (count1 == 3) {
             		 return true;
             	 }
              }
-             for (int i=2; i >= 0; i--) {
-            	 for (int j=0; j<3; j++) {
-            		 if (gameBoard[i][j].equals(turn)) {
-            			 count2++;
-            		 }
-            	 }
+
+//             for (int i=0; i <3; i++) {
+//            	 for (int j=2; j>=0; j--) {
+//            		 if (gameBoard[j][i].equals(turn)) {
+//            			 count2++;
+//            		 }
+//            	 }
+//            	 if (count2 == 3) {
+//            		 return true;
+//            	 }
+//             }
+             for(int i = 0; i<1 ; i++) {
+            	 if (gameBoard[0][2].equals(turn)) {
+        			 count2++;
+        		 }
+            	 if (gameBoard[1][1].equals(turn)) {
+        			 count2++;
+        		 }
+            	 if (gameBoard[2][0].equals(turn)) {
+        			 count2++;
+        		 }
             	 if (count2 == 3) {
             		 return true;
             	 }
