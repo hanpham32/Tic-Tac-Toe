@@ -1,0 +1,5 @@
+
+src/Board.java
+*.class
+bin/input.class
+bin/Board.class

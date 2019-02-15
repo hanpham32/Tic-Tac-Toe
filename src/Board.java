@@ -5,6 +5,7 @@ public class Board {
     	   this.init();
        }
        
+       // Initialize the gameBoard when started by putting empty strings in
        public void init() {
              for (int i=0; i<gameBoard.length; i++) {
                     for (int j=0; j<gameBoard.length; j++) {
@@ -13,6 +14,7 @@ public class Board {
              }
        }
        
+       // Displaying the board to the console
        public void display() {
              System.out.println("+-+-+-+");
              for (int i=0; i < gameBoard.length; i++) {
@@ -24,14 +26,17 @@ public class Board {
                     System.out.println("+-+-+-+");
              }
        }
+       
+       // Get row and col values from input class then put it in the gameBoard[][] array
        public void updateBoard(input in, String currentTurn) {
              int row = in.getRow();
              int col = in.getColumn();
              gameBoard[row][col] = currentTurn;
+             
        }
        
        public boolean check(String turn) { // Return true if a player win, then set running to false
-             // Code here ... 
+             // Check row
              for (int i=0; i<3; i++) {
             	 int count = 0;
             	 for (int j=0; j<3; j++) {
@@ -44,6 +49,7 @@ public class Board {
             		 return true;
             	 }
              }
+             //Check for column
              for (int i=0; i<3; i++) {
             	 int count = 0;
             	 for (int j=0; j<3; j++) {
