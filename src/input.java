@@ -28,7 +28,7 @@ public class input {
 	}
 	
 	public void checkPoint() {
-		if (row > 2 || column > 2) {
+		if (row > 2 || column > 2 || row < 1 || column < 1) {
 			System.out.println("Invalid input please re-enter a point between 1 and 3");
 			setPoint(); 
 		}
